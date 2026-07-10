@@ -1,0 +1,15 @@
+services:
+  uptime-kuma:
+    image: louislam/uptime-kuma:2
+    restart: unless-stopped
+    volumes:
+      - ./data:/app/data
+    ports:
+      # <Host Port>:<Container Port>
+      - "8001:8001"
+    networks:
+      - dokploy-network
+
+networks:
+  dokploy-network:
+    external: true
