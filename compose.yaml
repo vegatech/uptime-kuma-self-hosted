@@ -25,5 +25,5 @@ services:
         max-file: "3"
 
 networks:
-  kuma_network:
-    driver: bridge
+  dokploy-network:
+    external: true
