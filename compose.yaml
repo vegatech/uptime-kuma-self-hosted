@@ -4,7 +4,7 @@ services:
     container_name: uptime-kuma
     restart: always
     ports:
-      - "3010:3001"  # This maps the container port "3001" to the host port "3001"
+      - "3020:3001"  # This maps the container port "3001" to the host port "3001"
     volumes:
       - /path/to/data:/app/data  # Configuring persistent storage
     environment:
@@ -13,7 +13,7 @@ services:
     networks:
       - dokploy-network # add your own custom network config
     healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:3010"]
+      test: ["CMD", "curl", "-f", "http://localhost:3020"]
       interval: 30s
       retries: 3
       start_period: 10s
