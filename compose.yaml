@@ -6,7 +6,7 @@ services:
       - ./data:/app/data
     ports:
       # <Host Port>:<Container Port>
-      - "8001:8001"
+      - "8001:80"
     networks:
       - dokploy-network
 
